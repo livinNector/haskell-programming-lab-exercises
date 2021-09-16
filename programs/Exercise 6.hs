@@ -16,7 +16,7 @@ bubbleSort xs = bubbleSort rem ++ big
     big = [last prevPass]
     prevPass = bubbleUp xs
     bubbleUp [x] = [x]
-    bubbleUp (x:y:ys) = small : small : bubbleUp (big : ys)
+    bubbleUp (x:y:ys) = small : bubbleUp (big : ys)
       where
         (small, big) = if x>y then (y, x) else (x, y)  
 
